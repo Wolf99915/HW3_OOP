@@ -8,7 +8,7 @@ class Plant(Model):
         self.location = location
 
     @classmethod
-    def get_by_id(cls, id):
+    def get_by_id_plant(cls, id):
         plant_dict = super().get_by_id(id)
         get_employees_plant = Employee.get_data()
         print('Workers in a plant: ')
@@ -60,7 +60,7 @@ class Salon(Model):
         self.size = size
 
     @classmethod
-    def get_by_id(cls, id):
+    def get_by_id_salon(cls, id):
         salon_dict = super().get_by_id(id)
         get_employees = Employee.get_data()
         print('Workers in a salon: ')
